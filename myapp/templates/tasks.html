@@ -1,0 +1,13 @@
+<h1>Task</h1>
+
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat optio facilis aspernatur explicabo ut libero exercitationem, sunt distinctio quo corporis tempora officiis. Aperiam temporibus quam neque excepturi voluptas sunt quisquam.</p>
+
+
+{% for task in tasks %}
+<div>
+    <h1>{{ task.title }}</h1>
+    <p>{{ task.description }}</p>
+    <p>{{ task.project }}</p> 
+</div>
+
+{% endfor %}
