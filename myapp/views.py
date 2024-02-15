@@ -26,12 +26,12 @@ def projects(request):
         'projects': projects
     })
 
-def task(request):
-    tasks = list(Task.objects.values())
-    #task = Task.objects.get(id = id)
+def tasks(request):
+    tasks = Task.objects.all()
+    #tasks = Task.objects.get(id = 7)
     #task = get_object_or_404(Task, id=id)
     #task = Task.objects.get(title = title)
-    #return HttpResponse('Task: %s' % task.title)
+    #return HttpResponse('Task: %s' % tasks.project)
     return render(request, 'tasks.html', {
         'tasks': tasks
     })
