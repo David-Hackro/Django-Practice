@@ -6,9 +6,19 @@
 
 <div>
     <p>{{ t.title }} : {{ t.description }} : {{ t.project }}</p>
+        {% if t.done == False %}
+        <p>🕑 Tarea pendiente</p>
+        {% else %}
+        <p>✅ Tarea Realizada</p>
+        {% endif %}
+
         <button>
             Delete
         </button>
+
+        <button>
+            ✅ Done 
+        </button> 
 </div>
 
 {% endfor %}
